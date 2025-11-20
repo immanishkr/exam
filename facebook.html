@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook</title>
+
+    <style>
+        body {
+            background-color: #f2f4f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo1 {
+            height: 100px;
+            width: 200px;
+            margin-top: 100px;
+            margin-left: 530px;
+        }
+
+        .parent {
+            width: 400px;
+            margin-left: 420px;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px 0;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #username, #password {
+            border: 1px solid grey;
+            height: 30px;
+            border-radius: 5px;
+            width: 80%;
+            margin-left: 40px;
+            padding-left: 10px;
+        }
+
+        button {
+            margin-left: 170px;
+            border-radius: 5px;
+            padding: 8px 15px;
+            background-color: #1877F2;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #145cc1;
+        }
+
+        .fb {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: white;
+            margin-top: 50px;
+            padding-top: 20px;
+        }
+
+        .lang {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 12px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #385898;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img class="logo1"
+        src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"
+        alt="Facebook">
+    </div>
+
+    <!-- Login Box -->
+    <div class="parent">
+        <h3>Login to Facebook</h3>
+
+        <form id="loginForm">
+            <input type="text" id="username" name="username"
+            placeholder="Email or phone number"><br><br>
+
+            <input type="password" id="password" name="password"
+            placeholder="Password"><br><br>
+
+            <button type="submit">Login</button>
+
+            <p class="fb">
+                <a href="https://www.facebook.com/login/identify">
+                    Forgot password?
+                </a>
+            </p>
+        </form>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // stops form from submitting
+
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            if (username === "" || password === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            alert("Login Successful!\nUsername: " + username);
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="lang">English ಕನ್ನಡ اردو मराठी తెలుగు हिन्दी தமிழ் മലയാളം বাংলা ગુજરાતી ਪੰਜਾਬੀ</p>
+        <hr>
+
+        <nav>
+            <ul>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li><a href="#">Facebook Lite</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">Meta Pay</a></li>
+                <li><a href="#">Meta Store</a></li>
+                <li><a href="#">Meta Quest</a></li>
+                <li><a href="#">Ray-Ban Meta</a></li>
+                <li><a href="#">Meta AI</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Threads</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
